@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap");
+
+/*COLORS*/
+/* Primary */
+
+$bright-orange-color: hsl(31, 77%, 52%);
+$dark-cyan-color: hsl(184, 100%, 22%);
+$very-dark-cyan-color: hsl(179, 100%, 13%);
+
+/* Neutral */
+$paragraphs-color: hsla(0, 0%, 100%, 0.75);
+$background-headings-buttons-color: hsl(0, 0%, 95%);
+
+/* font-weight */
+$normal: 400;
+$bold: 700;
+
+/*SIZE*/
+$max-width-desktop: 1440px;
+$max-width-mobile: 375px;
+
+$breakpoints: (
+  "small-screen": 576px,
+  "medium-screen": 768px,
+  "large-screen": 992px,
+  "extra-large-screen": 1200px,
+  "extra-extra-large-screen": 1440px,
+);
+@mixin media-min($_key) {
+  @media screen and (min-width: map-get($breakpoints, $_key)) {
+    & {
+      @content;
+    }
+  }
+}

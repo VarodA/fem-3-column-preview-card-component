@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca:wght@400&display=swap");
+/*COLORS*/
+/* Primary */
+/* Neutral */
+/* font-weight */
+/*SIZE*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 80%;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.6rem;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.75);
+  background-color: #f2f2f2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@media screen and (min-width: 992px) {
+  body {
+    font-size: 1.1rem;
+  }
+}
+
+.main {
+  display: grid;
+  border-radius: 3rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 992px) {
+  .main {
+    max-width: 70rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.card {
+  padding: 3.9rem;
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content: flex-start;
+  max-width: 23rem;
+}
+.card:first-child {
+  border-radius: 0.8rem 0.8rem 0 0;
+}
+.card:last-child {
+  border-radius: 0 0 0.8rem 0.8rem;
+}
+.card__title {
+  text-transform: uppercase;
+}
+.card__text {
+  line-height: 1.8rem;
+}
+@media screen and (min-width: 992px) {
+  .card {
+    padding: 3rem;
+    max-width: 30rem;
+  }
+  .card:first-child {
+    border-radius: 0.8rem 0 0 0.8rem;
+  }
+  .card:last-child {
+    border-radius: 0 0.8rem 0.8rem 0;
+  }
+}
+.card--orange {
+  background-color: #e38826;
+}
+.card--cyan {
+  background-color: #006970;
+}
+.card--very-dark-cyan {
+  background-color: #004241;
+}
+.card__btn {
+  border: 0;
+  background-color: #f2f2f2;
+  border-radius: 2rem;
+  padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+}
+.card__btn--orange {
+  color: #e38826;
+}
+.card__btn--cyan {
+  color: #006970;
+}
+.card__btn--very-dark-cyan {
+  color: #004241;
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  color: black;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=../styles.289b3b6b.css.map */

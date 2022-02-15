@@ -1,0 +1,129 @@
+@import "variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 80%;
+}
+
+h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-size: 2.6rem;
+  font-weight:700;
+}
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+img {
+  height: auto;
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1rem;
+  color: $paragraphs-color;
+  background-color: $background-headings-buttons-color;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  @include media-min("large-screen") {
+ font-size:1.1rem;
+  }
+}
+
+.main {
+  display: grid;
+  border-radius: 3rem;
+  padding:2rem;
+  @include media-min("large-screen") {
+    max-width:70rem;
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+
+.card {
+  padding: 3.9rem;
+  min-height: 32rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: flex-start;
+  justify-content:flex-start;
+  max-width:23rem;
+
+  &:first-child{
+    border-radius:0.8rem 0.8rem 0 0;
+  }
+
+  &:last-child{
+    border-radius:0 0 0.8rem 0.8rem;
+  }
+
+  &__title{
+    text-transform:uppercase;
+  }
+
+  &__text{
+    line-height:1.8rem;
+  }
+
+  @include media-min("large-screen") {    
+    padding:3rem;
+    max-width:30rem;
+    &:first-child{
+      border-radius:0.8rem 0 0 0.8rem;
+    }
+    &:last-child{
+      border-radius:0 0.8rem 0.8rem 0;
+    }
+  }
+
+  &--orange {
+    background-color: $bright-orange-color;
+  }
+  &--cyan {
+    background-color: $dark-cyan-color;
+  }
+  &--very-dark-cyan {
+    background-color: $very-dark-cyan-color;
+  }
+
+  &__btn {
+    border: 0;
+    background-color: $background-headings-buttons-color;
+    border-radius: 2rem;
+    padding: 0.7rem 1.2rem 0.7rem 1.2rem;
+  }
+  &__btn--orange {
+    color: $bright-orange-color;
+  }
+
+  &__btn--cyan {
+    color: $dark-cyan-color;
+  }
+  &__btn--very-dark-cyan {
+    color: $very-dark-cyan-color;
+  }
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  color:black;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
